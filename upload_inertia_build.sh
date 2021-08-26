@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="I_0_0_1"
+VERSION="I_0_0_2"
 
 echo $VERSION > build/version.txt
 zip $VERSION.zip -r build/.
