@@ -1,0 +1,77 @@
+Initial updates to Inertia before flashing:
+Update IP Address to dhcp
+sudo /etc/init.d/networking restart
+
+Additional Updates:
+sudo apt-get install can-utils
+Sudo apt update & sudo apt upgrade
+sudo apt install git-all
+sudo apt-get install man-db
+sudo apt-get install ntpdate
+sudo service ntp stop
+sudo ntpdate -s time.nist.gov
+sudo service ntp start
+sudo apt install zip
+sudo apt install sshpass
+
+
+Install Python:
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
+tar -xf Python-3.9.6.tgz
+make
+sudo make altinstall
+
+Python Module Installs:
+sudo apt install python3-pip
+pip3 install requests
+pip3 install setuptools
+pip3 install wheel
+pip3 install Cython
+pip3 install numpy
+pip3 install pandas
+
+Install DNP3:
+
+sudo apt-get install binutils make csh g++ sed gawk autoconf automake autotools-dev
+sudo apt-get install libboost-all-dev
+sudo apt-get install bison flex
+apt-get install libpcre3 libpcre3-dev
+git clone https://github.com/swig/swig.git
+cd swig
+./autogen.sh
+./configure
+make
+sudo make install
+git clone https://github.com/gec/dnp3
+cd dnp3
+autoreconf -f -i
+mkdir build
+cd build
+../configure --with-boost-libdir=/usr/lib/arm-linux-gnueabihf --with-python --enable-odbc --disable-node --disable-core --disable-tests
+
+Install Python DNP3:
+sudo apt install python-pip
+pip install setuptools
+pip install scikit-build
+cd
+wget https://github.com/Kitware/CMake/releases/download/v3.15.2/cmake-3.15.2.tar.gz
+tar -zxvf cmake-3.15.2.tar.gz
+cd cmake-3.15.2
+./bootstrap
+make
+sudo make install
+cd
+git clone --recursive http://github.com/Kisensum/pydnp3
+cd pydnp3
+sudo python setup.py install
+
+Install sunspec python:
+git clone --recursive https://github.com/sunspec/pysunspec.git
+cd
+pip install pyserial
+sudo python setup.py install
+
+Install Remoteit:
+curl -LkO https://raw.githubusercontent.com/remoteit/installer/master/scripts/auto-install.sh
+chmod +x ./auto-install.sh
+sudo ./auto-install.sh
