@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scp -r $HOSTNAME@50.116.12.234:/home/$HOSTNAME/build/*.zip /home/moxa/build/archive/
+scp -r $HOSTNAME@volume.kinetix.energy:/home/$HOSTNAME/build/*.zip /home/moxa/build/archive/
 
 mkdir /home/moxa/build/temp
 unzip /home/moxa/build/archive/$1.zip -d /home/moxa/build/temp/

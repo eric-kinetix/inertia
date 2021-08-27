@@ -37,7 +37,7 @@ for filename in filelist:
         print('Removed', filename)
 
 # Send archived data to Volume
-# send_to_volume_command = 'rsync -zuv /home/moxa/data/archive/* ' + hostname + '@50.116.12.234:/home/' + hostname + '/data/archive'
+# send_to_volume_command = 'rsync -zuv /home/moxa/data/archive/* ' + hostname + '@volume.kinetix.energy:/home/' + hostname + '/data/archive'
 # print(send_to_volume_command)
 # os.system(send_to_volume_command)
 
